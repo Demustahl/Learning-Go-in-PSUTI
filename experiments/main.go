@@ -1,7 +1,9 @@
 package main
 
-import "fmt"
+import "fmt" // format - вывод и ввод
 
 func main() {
-    fmt.Println("Hello, Go!")
+	fmt.Println("Hello, Go!")
+
+	println("Hello, Go!") // не рекомендуется ??
 }
