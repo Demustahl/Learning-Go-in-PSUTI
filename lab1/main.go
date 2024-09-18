@@ -30,6 +30,7 @@ func main() {
 	default:
 		fmt.Println("Неверный выбор")
 	}
+
 }
 
 // Задание 1: вывод текущего времени и даты
@@ -38,14 +39,14 @@ func printCurrentTime() {
 	fmt.Println("Текущая дата и время:", currentTime.Format("02-01-2006 15:04:05"))
 }
 
-// Задание 2: создание и вывод переменных различных типов
+// Задание 2 и 3: создание и вывод переменных различных типов
 func printVariables() {
 	var integer int = 42
 	var floating float64 = 3.14
 	var str string = "Пример строки"
 	var boolean bool = true
 
-	// Использование краткой формы объявления переменных
+	// Задание 3: использование краткой формы объявления переменных
 	x := 100
 	y := 12.34
 	z := "Краткая форма"
@@ -82,19 +83,19 @@ func performArithmetic() {
 // Задание 4: сумма и разность чисел с плавающей запятой
 func calculateSumAndDifference() {
 	var x, y float64
-	fmt.Println("Введите два числа с плавающей запятой:")
+	fmt.Println("Введите два числа с плавающей запятой (через пробел):")
 	fmt.Scanln(&x, &y)
 
-	fmt.Println("Сумма:", x+y)
-	fmt.Println("Разность:", x-y)
+	fmt.Printf("Сумма: %f\n", x+y)
+	fmt.Printf("Разность: %f\n", x-y)
 }
 
 // Задание 5: вычисление среднего значения трех чисел
 func calculateAverage() {
 	var a, b, c float64
-	fmt.Println("Введите три числа для вычисления среднего значения:")
+	fmt.Println("Введите три числа для вычисления среднего значения (через пробел):")
 	fmt.Scanln(&a, &b, &c)
 
 	average := (a + b + c) / 3
-	fmt.Println("Среднее значение:", average)
+	fmt.Printf("Среднее значение: %f\n", average)
 }
