@@ -53,17 +53,17 @@ func flipString() {
 
 // Задание 3: Показать список из 5 чисел
 func displayIntArray() {
-	nums := [5]int{7, 14, 21, 28, 35}
+	nums := [5]int{13, 4, 69, 404, 666}
 	fmt.Println("Список чисел:", nums)
 }
 
 // Задание 4: Добавить и удалить элементы в срезе
 func modifySlice() {
-	origArray := [5]int{5, 10, 15, 20, 25}
+	origArray := [5]int{1, -5, 13455, 88, -111}
 	partSlice := origArray[2:4] // Выбираем часть массива
 	fmt.Println("Исходный срез:", partSlice)
 
-	partSlice = append(partSlice, 30) // Добавляем элемент
+	partSlice = append(partSlice, 33) // Добавляем элемент
 	fmt.Println("Срез после добавления:", partSlice)
 
 	partSlice = partSlice[:len(partSlice)-1] // Удаляем последний элемент
