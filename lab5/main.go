@@ -19,6 +19,7 @@ func (p Person) Info() {
 // Метод для увеличения возраста на 1 год
 func (p *Person) Birthday() {
 	p.age++
+
 }
 
 // Структура Circle
