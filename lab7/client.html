@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Chat</title>
+</head>
+<body>
+    <input id="username" placeholder="Введите имя" /><br>
+    <input id="message" placeholder="Введите сообщение" /><br>
+    <button onclick="sendMessage()">Отправить</button>
+    <ul id="messages"></ul>
+
+    <script>
+        const ws = new WebSocket("ws://localhost:8080/ws");
+
+        ws.onmessage = function(event) {
+            const msg = JSON.parse(event.data);
+            const li = document.createElement("li");
+            li.textContent = `${msg.username}: ${msg.message}`;
+            document.getElementById("messages").appendChild(li);
+        };
+
+        function sendMessage() {
+            const username = document.getElementById("username").value;
+            const message = document.getElementById("message").value;
+            ws.send(JSON.stringify({ username, message }));
+        }
+    </script>
+</body>
+</html>
