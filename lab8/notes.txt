@@ -16,6 +16,11 @@ systemctl status mongodb
 mongosh
 
 2. Работа с бд:
+
+curl -X POST http://localhost:8080/users -H "Content-Type: application/json" -d '{"name": "Alice", "age": 25}'
+curl -X POST http://localhost:8080/users -H "Content-Type: application/json" -d '{"name": "Maksim", "age": 30}'
+
+
 добавить юзера
 curl -X POST http://localhost:8080/users -H "Content-Type: application/json" -d '{"name": "Maksim", "age": 20}'
 получить всех юзеров
