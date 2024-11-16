@@ -14,7 +14,7 @@ import (
 // Инициализация хранилища сессий
 var store = sessions.NewCookieStore([]byte("super-secret-key"))
 
-// Фиктивные данные пользователей
+// Данные пользователей
 var users = map[string]string{
 	"admin": "admin123",
 	"user":  "user123",
